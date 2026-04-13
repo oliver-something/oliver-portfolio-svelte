@@ -99,65 +99,63 @@
       </nav>
     </div>
   </header>
+  <main class="flex flex-col flex-1">
+      <section id="home" class="section-shell flex min-h-[calc(100vh-72px)] items-center justify-center">
 
-  <main>
-    <section id="home" class="section-shell flex min-h-[calc(100vh-72px)] items-center flex-row">
-      <div class="grid w-full items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
-        <div class="space-y-8">
-          <div class="space-y-5">
-            <p class="font-mono text-xs uppercase tracking-[0.35em] text-white/55">Hey There, I'm</p>
-            <h1 class="max-w-4xl text-5xl font-semibold leading-none tracking-tight text-white sm:text-6xl md:text-7xl">
-              Oliver Something
-            </h1>
-            <p class="max-w-2xl text-xl leading-8 text-white/74 md:text-2xl">
-              I build clean and efficient digital experiences.
-            </p>
+          <div class="flex w-full flex-col items-center justify-center gap-8">
+              <div class="relative h-[280px] w-[280px] shrink-0 sm:h-[320px] sm:w-[320px]">
+                  <div class="absolute inset-[-6px] rounded-full bg-linear-to-r/srgb from-black/30 to-gray-400/40 animate-[spin_6s_linear_infinite]"></div>
+
+                  <div class="relative h-full w-full overflow-hidden rounded-full border border-white/10 bg-black/60">
+                      <img
+                              src={portrait}
+                              alt="Portrait of Oliver Something"
+                              class="h-full w-full object-cover object-center grayscale"
+                      />
+                  </div>
+              </div>
+
+              <div class="flex max-w-4xl flex-col items-center gap-5 text-center">
+                  <p class="font-mono text-xs uppercase tracking-[0.35em] text-white/55">
+                      Hey There, I'm
+                  </p>
+
+                  <h1 class="text-5xl font-semibold leading-none tracking-tight text-white sm:text-6xl md:text-7xl">
+                      Oliver Something
+                  </h1>
+
+                  <p class="max-w-2xl text-xl leading-8 text-white/74 md:text-2xl">
+                      I build clean and efficient digital experiences.
+                  </p>
+
+                  <div class="flex flex-row gap-4 pt-2">
+                      <a
+                              href="#work"
+                              class="inline-flex items-center justify-center rounded-2xl border bg-white px-3 py-3 text-sm font-medium text-black transition hover:border-white hover:bg-white/70 hover:animate-pulse"
+                      >
+                          <GithubLogoIcon size="25" />
+                      </a>
+
+                      <a
+                              href="#contact"
+                              class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-3 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08] hover:animate-pulse"
+                      >
+                          <LinkedinLogoIcon size="25" />
+                      </a>
+                  </div>
+              </div>
+
+              <div class="grid w-full gap-4 pt-4 sm:grid-cols-3">
+                  {#each infoCardItems as item}
+                      <InfoCard
+                              title={item.title}
+                              description={item.description}
+                              icon={item.icon}
+                      />
+                  {/each}
+              </div>
           </div>
-
-          <div class="flex flex-row gap-4">
-            <a
-              href="#work"
-              class="inline-flex items-center justify-center rounded-2xl border bg-white px-3 py-3 text-sm font-medium text-black transition hover:bg-white/70 hover: hover: border-white hover:animate-pulse"
-            >
-                <!--TODO Add the real link here -->
-                <GithubLogoIcon size="25"/>
-            </a>
-            <a
-              href="#contact"
-              class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-3 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08] hover:animate-pulse"
-            >
-                <!--TODO Add the real link here -->
-                <LinkedinLogoIcon size="25"/>
-            </a>
-          </div>
-
-            <div class="grid gap-4 pt-4 sm:grid-cols-3">
-                {#each infoCardItems as item}
-                    <InfoCard
-                            title={item.title}
-                            description={item.description}
-                            icon={item.icon}
-                    />
-                {/each}
-            </div>
-
-        </div>
-
-        <div class="relative mx-auto w-full max-w-md lg:max-w-none">
-          <div class="absolute -inset-4 rounded-[2rem] border border-white/8"></div>
-          <div class="binary-panel relative overflow-hidden rounded-[2rem] p-4 sm:p-5">
-            <div class="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(255,255,255,0.08),transparent_36%)]"></div>
-            <div class="relative overflow-hidden rounded-[1.5rem] border border-white/10 bg-black/60">
-              <img
-                src={portrait}
-                alt="Portrait of Oliver Something"
-                class="h-[520px] w-full object-cover object-center grayscale"
-              />
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+      </section>
 
     <section id="about" class="section-shell pt-4 md:pt-10">
       <SectionTitle
