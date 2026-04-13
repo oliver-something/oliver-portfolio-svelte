@@ -27,7 +27,7 @@
       context.setTransform(1, 0, 0, 1, 0, 0);
       context.scale(ratio, ratio);
 
-      fontSize = width < 640 ? 14 : 18;
+      fontSize = width < 640 ? 14 : 25;
       columns = Math.ceil(width / fontSize);
       drops = Array.from({ length: columns }, () => Math.random() * -height);
       context.font = `${fontSize}px ui-monospace, SFMono-Regular, Menlo, Consolas, monospace`;
@@ -67,4 +67,4 @@
   });
 </script>
 
-<canvas bind:this={canvas} class="fixed inset-0 z-10 opacity-15"></canvas>
+<canvas bind:this={canvas} class="fixed inset-0 z-10 opacity-25"></canvas>
