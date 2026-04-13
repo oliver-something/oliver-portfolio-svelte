@@ -4,7 +4,7 @@
   import SectionTitle from './lib/components/SectionTitle.svelte';
   import SkillBadge from './lib/components/SkillBadge.svelte';
   import portrait from './assets/oliver-portrait.png';
-  import {FileCodeIcon, GithubLogoIcon, LinkedinLogoIcon, TerminalWindowIcon, WrenchIcon} from "phosphor-svelte";
+  import {FileCodeIcon, GithubLogoIcon, LinkedinLogoIcon, TerminalWindowIcon, WrenchIcon, GhostIcon, AddressBookIcon } from "phosphor-svelte";
   import InfoCard from "./lib/components/InfoCard.svelte";
 
   const skills = [
@@ -130,17 +130,19 @@
 
                   <div class="flex flex-row gap-4 pt-2">
                       <a
-                              href="#work"
+                              href="#about"
                               class="inline-flex items-center justify-center rounded-2xl border bg-white px-3 py-3 text-sm font-medium text-black transition hover:border-white hover:bg-white/70 hover:animate-pulse"
                       >
-                          <GithubLogoIcon size="25" />
+                          <GhostIcon size="20" />
+                          &nbsp;About Me
                       </a>
 
                       <a
                               href="#contact"
                               class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-3 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08] hover:animate-pulse"
                       >
-                          <LinkedinLogoIcon size="25" />
+                          <AddressBookIcon  size="20" />
+                          &nbsp;Contact Me
                       </a>
                   </div>
               </div>
