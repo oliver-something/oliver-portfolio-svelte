@@ -4,7 +4,19 @@
   import SectionTitle from './lib/components/SectionTitle.svelte';
   import SkillBadge from './lib/components/SkillBadge.svelte';
   import portrait from './assets/oliver-portrait.png';
-  import {FileCodeIcon, GithubLogoIcon, LinkedinLogoIcon, TerminalWindowIcon, WrenchIcon, GhostIcon, AddressBookIcon } from "phosphor-svelte";
+  import {
+      CodeIcon,
+      FileCodeIcon,
+      GithubLogoIcon,
+      LinkedinLogoIcon,
+      TerminalWindowIcon,
+      WrenchIcon,
+      GhostIcon,
+      AddressBookIcon,
+      UserIcon,
+      GlobeIcon,
+      Code
+  } from "phosphor-svelte";
   import InfoCard from "./lib/components/InfoCard.svelte";
 
   const skills = [
@@ -19,21 +31,6 @@
     'Linux',
     'Testing',
     'System Design',
-  ];
-
-  const focusAreas = [
-    {
-      title: 'Backend architecture',
-      text: 'Clean service boundaries, maintainable code, and systems that still make sense six months later.'
-    },
-    {
-      title: 'API engineering',
-      text: 'Reliable endpoints, robust auth flows, and data models that do not collapse into spaghetti after version two.'
-    },
-    {
-      title: 'Shipping mindset',
-      text: 'Practical engineering choices, careful debugging, and a steady bias toward useful software over ornamental hype.'
-    }
   ];
 
   const projects = [
@@ -74,6 +71,25 @@
           icon: WrenchIcon,
       }
   ];
+
+  const personalInfoCardItems = [
+      {
+          title: 'Full Name',
+          description: 'Khashayar Hosseini',
+          icon: UserIcon,
+      },
+      {
+          title: 'Based In',
+          description: "Tehran, Iran",
+          icon: GlobeIcon,
+
+      },
+      {
+          title: 'Available For',
+          description: "Freelance / Part-time",
+          icon: CodeIcon,
+      }
+  ]
 </script>
 <svelte:head>
   <title>Oliver Something | Python & Django Backend Developer</title>
@@ -161,36 +177,22 @@
 
     <section id="about" class="section-shell pt-4 md:pt-10">
       <SectionTitle
-        eyebrow="About"
-        title="A backend portfolio with more signal than glitter"
+        eyebrow="About Me"
+        title="Software Engineer"
         description="This layout keeps the spotlight on engineering craft: scalable Django services, thoughtful architecture, and systems built to do real work instead of collecting decorative buzzwords."
       />
 
       <div class="mt-12 grid gap-6 lg:grid-cols-[1.1fr_0.9fr]">
         <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8 md:p-10">
-          <div class="space-y-6 text-white/74">
-            <p class="text-lg leading-8">
-              I build backend systems with Python and Django, focusing on APIs, business logic, database design, and the kind of reliability people only notice when it is missing.
-            </p>
-            <p class="text-base leading-8">
-              The visual language here mirrors the work: black, white, contrast, structure. No sugar fog. Just a clean one-page portfolio with a cinematic portrait, a responsive layout, and a binary rain background threaded quietly behind the content.
-            </p>
-            <div class="rounded-2xl border border-white/10 bg-black/35 p-5">
-              <p class="font-mono text-xs uppercase tracking-[0.3em] text-white/48">Current angle</p>
-              <p class="mt-3 text-sm leading-7 text-white/72">
-                Python backend engineering, Django application design, RESTful services, async processing, authentication flows, and database-heavy product work.
-              </p>
+            <div class="grid w-full gap-4 pt-4 sm:grid-cols-3">
+                {#each personalInfoCardItems as item}
+                    <InfoCard
+                            title={item.title}
+                            description={item.description}
+                            icon={item.icon}
+                    />
+                {/each}
             </div>
-          </div>
-        </div>
-
-        <div class="grid gap-4">
-          {#each focusAreas as area}
-            <div class="rounded-[1.75rem] border border-white/10 bg-white/[0.04] p-6 md:p-7">
-              <p class="font-mono text-xs uppercase tracking-[0.28em] text-white/44">{area.title}</p>
-              <p class="mt-4 text-base leading-8 text-white/72">{area.text}</p>
-            </div>
-          {/each}
         </div>
       </div>
     </section>
