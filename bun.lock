@@ -5,6 +5,8 @@
     "": {
       "name": "oliver-portfolio-svelte",
       "devDependencies": {
+        "@fontsource-variable/geist": "latest",
+        "@fontsource-variable/geist-mono": "latest",
         "@sveltejs/vite-plugin-svelte": "latest",
         "@tailwindcss/vite": "latest",
         "phosphor-svelte": "latest",
@@ -20,6 +22,10 @@
     "@emnapi/runtime": ["@emnapi/runtime@1.9.2", "https://mirror-npm.runflare.com/@emnapi/runtime/-/runtime-1.9.2.tgz", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-3U4+MIWHImeyu1wnmVygh5WlgfYDtyf0k8AbLhMFxOipihf6nrWC4syIm/SwEeec0mNSafiiNnMJwbza/Is6Lw=="],
 
     "@emnapi/wasi-threads": ["@emnapi/wasi-threads@1.2.1", "https://mirror-npm.runflare.com/@emnapi/wasi-threads/-/wasi-threads-1.2.1.tgz", { "dependencies": { "tslib": "^2.4.0" } }, "sha512-uTII7OYF+/Mes/MrcIOYp5yOtSMLBWSIoLPpcgwipoiKbli6k322tcoFsxoIIxPDqW01SQGAgko4EzZi2BNv2w=="],
+
+    "@fontsource-variable/geist": ["@fontsource-variable/geist@5.2.8", "https://mirror-npm.runflare.com/@fontsource-variable/geist/-/geist-5.2.8.tgz", {}, "sha512-cJ6m9e+8MQ5dCYJsLylfZrgBh6KkG4bOLckB35Tr9J/EqdkEM6QllH5PxqP1dhTvFup+HtMRPuz9xOjxXJggxw=="],
+
+    "@fontsource-variable/geist-mono": ["@fontsource-variable/geist-mono@5.2.7", "https://mirror-npm.runflare.com/@fontsource-variable/geist-mono/-/geist-mono-5.2.7.tgz", {}, "sha512-ZKlZ5sjtalb2TwXKs400mAGDlt/+2ENLNySPx0wTz3bP3mWARCsUW+rpxzZc7e05d2qGch70pItt3K4qttbIYA=="],
 
     "@jridgewell/gen-mapping": ["@jridgewell/gen-mapping@0.3.13", "https://mirror-npm.runflare.com/@jridgewell/gen-mapping/-/gen-mapping-0.3.13.tgz", { "dependencies": { "@jridgewell/sourcemap-codec": "^1.5.0", "@jridgewell/trace-mapping": "^0.3.24" } }, "sha512-2kkt/7niJ6MgEPxF0bYdQ6etZaA+fQvDcLKckhy1yIQOzaoKjBBjSj63/aLVjYE3qhRt5dvM+uUyfCg6UKCBbA=="],
 

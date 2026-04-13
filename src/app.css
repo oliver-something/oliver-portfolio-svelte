@@ -1,3 +1,5 @@
+@import "@fontsource-variable/geist/wght.css";
+@import "@fontsource-variable/geist-mono/wght.css";
 @import "tailwindcss";
 
 :root {
@@ -57,4 +59,10 @@ body {
   box-shadow:
     0 0 0 1px rgba(255, 255, 255, 0.08) inset,
     0 30px 60px rgba(0, 0, 0, 0.35);
+}
+
+@theme {
+    --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+    --font-mono: "Geist Mono Variable", ui-monospace, monospace;
+    --font-display: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
 }

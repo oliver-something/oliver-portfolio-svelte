@@ -11,9 +11,11 @@
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "latest",
     "@tailwindcss/vite": "latest",
+    "phosphor-svelte": "latest",
     "svelte": "latest",
     "tailwindcss": "latest",
     "vite": "latest",
-    "phosphor-svelte": "latest"
+    "@fontsource-variable/geist": "latest",
+    "@fontsource-variable/geist-mono": "latest"
   }
 }
