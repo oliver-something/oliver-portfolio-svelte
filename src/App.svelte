@@ -4,7 +4,8 @@
   import SectionTitle from './lib/components/SectionTitle.svelte';
   import SkillBadge from './lib/components/SkillBadge.svelte';
   import portrait from './assets/oliver-portrait.png';
-  import {GithubLogoIcon, LinkedinLogoIcon} from "phosphor-svelte";
+  import {FileCodeIcon, GithubLogoIcon, LinkedinLogoIcon, TerminalWindowIcon, WrenchIcon} from "phosphor-svelte";
+  import InfoCard from "./lib/components/InfoCard.svelte";
 
   const skills = [
     'Python',
@@ -55,6 +56,24 @@
       stack: ['Python', 'JWT', 'RBAC', 'Testing']
     }
   ];
+
+  const infoCardItems = [
+      {
+          title: 'My Focus',
+          description: 'FullStack development, Designing WebAPIs',
+          icon: TerminalWindowIcon,
+      },
+      {
+          title: 'Core Skills',
+          description: 'Python, Django, Relational Databases, Svelte',
+          icon: FileCodeIcon,
+      },
+      {
+          title: 'Soft Skills',
+          description: 'Building practical and scalable solutions',
+          icon: WrenchIcon,
+      }
+  ];
 </script>
 <svelte:head>
   <title>Oliver Something | Python & Django Backend Developer</title>
@@ -82,7 +101,7 @@
   </header>
 
   <main>
-    <section id="home" class="section-shell flex min-h-[calc(100vh-72px)] items-center">
+    <section id="home" class="section-shell flex min-h-[calc(100vh-72px)] items-center flex-row">
       <div class="grid w-full items-center gap-14 lg:grid-cols-[1.15fr_0.85fr]">
         <div class="space-y-8">
           <div class="space-y-5">
@@ -95,33 +114,33 @@
             </p>
           </div>
 
-          <div class="flex flex-col gap-4 sm:flex-row">
+          <div class="flex flex-row gap-4">
             <a
               href="#work"
-              class="inline-flex items-center justify-center rounded-2xl border bg-white px-3 py-3 text-sm font-medium text-black transition hover:bg-white/70 hover: hover: border-white"
+              class="inline-flex items-center justify-center rounded-2xl border bg-white px-3 py-3 text-sm font-medium text-black transition hover:bg-white/70 hover: hover: border-white hover:animate-pulse"
             >
+                <!--TODO Add the real link here -->
                 <GithubLogoIcon size="25"/>
             </a>
             <a
               href="#contact"
-              class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-3 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08]"
+              class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-3 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08] hover:animate-pulse"
             >
+                <!--TODO Add the real link here -->
                 <LinkedinLogoIcon size="25"/>
             </a>
           </div>
 
-          <div class="grid gap-4 pt-4 sm:grid-cols-3">
-            {#each [
-              ['Focus', 'Web-APIs'],
-              ['Core', 'Python, Django, Relational Databases'],
-              ['Style', 'Practical, Simple, Scalable']
-            ] as item}
-              <div class="rounded-2xl border border-white/10 bg-white/[0.035] px-5 py-4">
-                <p class="font-mono text-[11px] uppercase tracking-[0.24em] text-white/42">{item[0]}</p>
-                <p class="mt-2 text-sm text-white/82">{item[1]}</p>
-              </div>
-            {/each}
-          </div>
+            <div class="grid gap-4 pt-4 sm:grid-cols-3">
+                {#each infoCardItems as item}
+                    <InfoCard
+                            title={item.title}
+                            description={item.description}
+                            icon={item.icon}
+                    />
+                {/each}
+            </div>
+
         </div>
 
         <div class="relative mx-auto w-full max-w-md lg:max-w-none">
