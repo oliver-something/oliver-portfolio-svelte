@@ -1,12 +1,13 @@
 <script>
     import BinaryRain from './lib/components/BinaryRain.svelte';
-    import ProjectCard from './lib/components/ProjectCard.svelte';
     import SkillBadge from './lib/components/SkillBadge.svelte';
     import portrait from './assets/oliver-portrait.png';
     import InfoCard from './lib/components/InfoCard.svelte';
     import SectionTitle from './lib/components/SectionTitle.svelte';
     import ContactCard from "./lib/components/ContactCard.svelte";
     import NavLinks from "./lib/components/NavLinks.svelte";
+    import ExperienceAccordion from "./lib/components/ExperienceAccordion.svelte";
+
     import {
         GhostIcon,
         AddressBookIcon,
@@ -14,7 +15,6 @@
     } from 'phosphor-svelte';
 
     import {contactInfoCardItems, infoCardItems, personalInfoCardItems, points, projects, skills} from "./lib/contents/index.js";
-    import ExperienceAccordion from "./lib/components/ExperienceAccordion.svelte";
 </script>
 
 <svelte:head>
