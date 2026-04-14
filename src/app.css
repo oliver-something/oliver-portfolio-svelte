@@ -3,11 +3,61 @@
 @import "tailwindcss";
 
 :root {
-  color-scheme: dark;
-  font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  background: #000;
-  color: #fff;
-  scroll-behavior: smooth;
+    color-scheme: dark;
+    background: #000;
+    color: #fff;
+    scroll-behavior: smooth;
+    --type-label-size: 0.75rem;
+    --type-label-line: 1rem;
+
+    --type-body-size: 1rem;
+    --type-body-line: 1.75rem;
+
+    --type-body-sm-size: 0.875rem;
+    --type-body-sm-line: 1.5rem;
+
+    --type-body-lg-size: 1.25rem;
+    --type-body-lg-line: 2rem;
+
+    --type-hero-size: 4.5rem;
+    --type-hero-line: 1;
+
+    --type-section-size: 3rem;
+    --type-section-line: 1.05;
+
+    --type-card-title-size: 1.5rem;
+    --type-card-title-line: 1.2;
+
+    --type-nav-size: 0.875rem;
+    --type-overlay-nav-size: 1.5rem;
+}
+
+@media (max-width: 640px) {
+    :root {
+        --type-label-size: 0.6875rem;
+        --type-label-line: 0.95rem;
+
+        --type-body-size: 0.95rem;
+        --type-body-line: 1.6rem;
+
+        --type-body-sm-size: 0.875rem;
+        --type-body-sm-line: 1.4rem;
+
+        --type-body-lg-size: 1.05rem;
+        --type-body-lg-line: 1.7rem;
+
+        --type-hero-size: 2.75rem;
+        --type-hero-line: 1;
+
+        --type-section-size: 2rem;
+        --type-section-line: 1.1;
+
+        --type-card-title-size: 1.25rem;
+        --type-card-title-line: 1.25;
+
+        --type-nav-size: 0.8125rem;
+        --type-overlay-nav-size: 1.25rem;
+    }
 }
 
 html,
@@ -65,4 +115,47 @@ body {
     --font-sans: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
     --font-mono: "Geist Mono Variable", ui-monospace, monospace;
     --font-display: "Geist Variable", ui-sans-serif, system-ui, sans-serif;
+}
+
+.type-label {
+    font-size: var(--type-label-size);
+    line-height: var(--type-label-line);
+}
+
+.type-body {
+    font-size: var(--type-body-size);
+    line-height: var(--type-body-line);
+}
+
+.type-body-sm {
+    font-size: var(--type-body-sm-size);
+    line-height: var(--type-body-sm-line);
+}
+
+.type-body-lg {
+    font-size: var(--type-body-lg-size);
+    line-height: var(--type-body-lg-line);
+}
+
+.type-hero {
+    font-size: var(--type-hero-size);
+    line-height: var(--type-hero-line);
+}
+
+.type-section-title {
+    font-size: var(--type-section-size);
+    line-height: var(--type-section-line);
+}
+
+.type-card-title {
+    font-size: var(--type-card-title-size);
+    line-height: var(--type-card-title-line);
+}
+
+.type-nav {
+    font-size: var(--type-nav-size);
+}
+
+.type-overlay-nav {
+    font-size: var(--type-overlay-nav-size);
 }
