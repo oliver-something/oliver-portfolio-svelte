@@ -34,32 +34,31 @@
 
 @media (max-width: 640px) {
     :root {
-        --type-label-size: 0.6875rem;
-        --type-label-line: 0.95rem;
+        --type-label-size: 0.625rem;
+        --type-label-line: 0.9rem;
 
-        --type-body-size: 0.95rem;
+        --type-body-sm-size: 0.8125rem;
+        --type-body-sm-line: 1.35rem;
+
+        --type-body-size: 0.9375rem;
         --type-body-line: 1.6rem;
 
-        --type-body-sm-size: 0.875rem;
-        --type-body-sm-line: 1.4rem;
-
-        --type-body-lg-size: 1.05rem;
-        --type-body-lg-line: 1.7rem;
-
-        --type-hero-size: 2.75rem;
-        --type-hero-line: 1;
-
-        --type-section-size: 2rem;
-        --type-section-line: 1.1;
-
-        --type-card-title-size: 1.25rem;
-        --type-card-title-line: 1.25;
+        --type-body-lg-size: 1rem;
+        --type-body-lg-line: 1.75rem;
 
         --type-nav-size: 0.8125rem;
-        --type-overlay-nav-size: 1.25rem;
+        --type-overlay-nav-size: 1.125rem;
+
+        --type-card-title-size: 1.25rem;
+        --type-card-title-line: 1.3;
+
+        --type-section-size: 1.875rem;
+        --type-section-line: 1.1;
+
+        --type-hero-size: 2.75rem;
+        --type-hero-line: 0.98;
     }
 }
-
 html,
 body,
 #app {
