@@ -31,13 +31,13 @@
     <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <a
                 href="#home"
-                class="z-[60] font-mono text-sm uppercase tracking-[0.34em] text-white/90"
+                class="z-[60] font-mono type-body-sm uppercase tracking-[0.34em] text-white/90"
                 onclick={closeMenu}
         >
             Oliver Something
         </a>
 
-        <nav class="hidden items-center gap-8 text-sm text-white/65 md:flex">
+        <nav class="hidden items-center gap-8 type-nav text-white/65 md:flex">
             {#each navItems as item}
                 <a class="transition hover:text-white" href={item.href}>
                     {item.label}
@@ -84,7 +84,7 @@
                 {#each navItems as item, index}
                     <a
                             href={item.href}
-                            class="font-mono text-2xl uppercase tracking-[0.22em] text-white/78 transition-all duration-300 hover:scale-[1.03] hover:text-white"
+                            class="font-mono type-overlay-nav uppercase tracking-[0.22em] text-white/78 transition-all duration-300 hover:scale-[1.03] hover:text-white"
                             style={`transition-delay: ${index * 60}ms`}
                             onclick={closeMenu}
                     >
