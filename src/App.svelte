@@ -5,121 +5,16 @@
     import portrait from './assets/oliver-portrait.png';
     import InfoCard from './lib/components/InfoCard.svelte';
     import SectionTitle from './lib/components/SectionTitle.svelte';
-    import {
-        CodeIcon,
-        FileCodeIcon,
-        GithubLogoIcon,
-        LinkedinLogoIcon,
-        MailboxIcon,
-        WrenchIcon,
-        GhostIcon,
-        AddressBookIcon,
-        UserIcon,
-        GlobeIcon,
-        CopyrightIcon
-    } from 'phosphor-svelte';
     import ContactCard from "./lib/components/ContactCard.svelte";
     import NavLinks from "./lib/components/NavLinks.svelte";
+    import {
+        GhostIcon,
+        AddressBookIcon,
+        CopyrightIcon
+    } from 'phosphor-svelte';
 
-    const skills = [
-        'Python',
-        'Django',
-        'Django REST Framework',
-        'Relational Databases',
-        'REST APIs',
-        'Docker',
-        'Celery',
-        'Redis',
-        'Linux',
-        'Testing',
-        'System Design'
-    ];
-
-    const projects = [
-        {
-            title: 'API Platform for Data-Heavy Workflows',
-            summary:
-                'A portfolio-style placeholder for a backend platform that handles structured business logic, async jobs, and database-heavy operations through a calm, scalable Django core.',
-            stack: ['Python', 'Django', 'DRF', 'Relational Databases']
-        },
-        {
-            title: 'Internal Operations Dashboard Backend',
-            summary:
-                'A backend service layer focused on permissions, reporting, audit-friendly endpoints, and the sort of operational plumbing that quietly keeps teams functional.',
-            stack: ['Django', 'Redis', 'Celery', 'Docker']
-        },
-        {
-            title: 'Authentication and Access Service',
-            summary:
-                'A clean authentication backbone with session control, role-based access, and backend rules built for products that need security without theatrical complexity.',
-            stack: ['Python', 'JWT', 'RBAC', 'Testing']
-        }
-    ];
-
-    const infoCardItems = [
-        {
-            title: 'My Focus',
-            description: 'Full-stack development and backend-heavy web APIs.',
-            icon: GhostIcon
-        },
-        {
-            title: 'Core Skills',
-            description: 'Python, Django, relational databases, and Svelte.',
-            icon: FileCodeIcon
-        },
-        {
-            title: 'Working Style',
-            description: 'Practical, simple, scalable, and debug-friendly.',
-            icon: WrenchIcon
-        }
-    ];
-
-    const personalInfoCardItems = [
-        {
-            title: 'Full Name',
-            description: 'Khashayar Hosseini',
-            icon: UserIcon
-        },
-        {
-            title: 'Based In',
-            description: 'Tehran, Iran',
-            icon: GlobeIcon
-        },
-        {
-            title: 'Available For',
-            description: 'Freelance / Part-time',
-            icon: CodeIcon
-        }
-    ];
-
-    const contactInfoCardItems = [
-        {
-            title: 'Email Address',
-            address: "diablo31@live.co.uk",
-            icon: MailboxIcon,
-            url: "mailto:diablo31@live.co.uk"
-        },
-        {
-            title: 'LinkedIn',
-            address: "https://linkedin.com/in/myaddress",
-            icon: LinkedinLogoIcon,
-            url: "https://linkedin.com/in/myaddress"
-        },
-        {
-            title: 'GitHub',
-            address: "https://github.com/myaddress",
-            icon: GithubLogoIcon,
-            url: "https://github.com/myaddress"
-        }
-    ];
-
-    const points = [
-        'Reliable API design with clean boundaries',
-        'Readable backend architecture that ages gracefully',
-        'Database models that support the product instead of sabotaging it',
-        'Thoughtful performance work and debugging discipline',
-        'Deployment-ready habits without infrastructure theater'
-    ];
+    import {contactInfoCardItems, infoCardItems, personalInfoCardItems, points, projects, skills} from "./lib/contents/index.js";
+    import ExperienceAccordion from "./lib/components/ExperienceAccordion.svelte";
 </script>
 
 <svelte:head>
@@ -286,15 +181,11 @@
                 <SectionTitle
                         eyebrow="Work"
                         title="Featured backend directions"
-                        description="These project cards are placeholders for now, but the layout is ready for real work and real links."
+                        description="Not shiny app-store tiles. Real backend ideas with clear scope, system thinking, and room for actual implementation details."
                         centered
                 />
 
-                <div class="mt-10 grid gap-6 lg:grid-cols-3">
-                    {#each projects as project}
-                        <ProjectCard {project} />
-                    {/each}
-                </div>
+                <ExperienceAccordion items={projects}/>
             </div>
         </section>
 
@@ -339,5 +230,5 @@
     6. TODO Work needs to be redefined and real content
     7. TODO The contact requires real work to be done!
     8. Todo Fix all of the remaining text-sizes : DONE!
-
+    9. Separation of concerns! Fuck!!!!!
 -->
