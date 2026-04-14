@@ -123,10 +123,10 @@
 </script>
 
 <svelte:head>
-    <title>Oliver Something | Python & Django Backend Developer</title>
+    <title>Oliver Something | Back-End / Full-Stack Developer</title>
     <meta
             name="description"
-            content="Oliver Something builds robust Django and Python backend systems with a monochrome portfolio experience and binary rain animation."
+            content="Freelance / Part-time Developer focusing on FullStack and Backend Development."
     />
 </svelte:head>
 
@@ -152,20 +152,20 @@
                 </div>
 
                 <div class="flex max-w-4xl flex-col items-center gap-5">
-                    <p class="font-mono text-xs uppercase tracking-[0.35em] text-white/55">Hey There, I'm</p>
+                    <p class="font-mono type-label uppercase tracking-[0.35em] text-white/55">Hey There, I'm</p>
 
-                    <h1 class="text-5xl font-semibold leading-none tracking-tight text-white sm:text-6xl md:text-7xl">
+                    <h1 class="type-hero font-semibold leading-none tracking-tight text-white sm:text-6xl">
                         Oliver Something
                     </h1>
 
-                    <p class="max-w-2xl text-xl leading-8 text-white/74 md:text-2xl">
+                    <p class="max-w-2xl type-body-lg leading-8 text-white/74">
                         I build clean and efficient digital experiences.
                     </p>
 
                     <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
                         <a
                                 href="#work"
-                                class="inline-flex items-center justify-center rounded-2xl border bg-white px-4 py-3 text-sm font-medium text-black transition hover:border-white hover:bg-white/70"
+                                class="inline-flex items-center justify-center rounded-2xl border bg-white px-4 py-3 type-body-sm font-medium text-black transition hover:border-white hover:bg-white/70"
                         >
                             <GhostIcon size="20" />
                             <span class="ml-2">See Work</span>
@@ -173,7 +173,7 @@
 
                         <a
                                 href="#contact"
-                                class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-4 py-3 text-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08]"
+                                class="inline-flex items-center justify-center rounded-2xl border border-white/18 bg-white/[0.04] px-4 py-3 type-body-sm font-medium text-white transition hover:border-white/35 hover:bg-white/[0.08]"
                         >
                             <AddressBookIcon size="20" />
                             <span class="ml-2">Contact Me</span>
@@ -200,7 +200,7 @@
 
                 <div class="mx-auto mt-10 grid w-full max-w-5xl gap-4 md:grid-cols-3">
                     {#each personalInfoCardItems as item}
-                        <InfoCard title={item.title} description={item.description} icon={item.icon} />
+                        <InfoCard title={item.title} description={item.description} icon={item.icon}/>
                     {/each}
                 </div>
             </div>
@@ -215,7 +215,7 @@
                         centered
                 />
                 <div class="mx-auto mt-10 grid w-full max-w-5xl gap-6 lg:grid-cols-2">
-                    <div class="card-outline rounded-[2rem] p-6 md:p-8">
+                    <div class="card-outline rounded-[2rem] p-6 md:p-8 border border-white/12 bg-white/[0.04] transition duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]">
                         <div class="flex items-start gap-4">
                             <div class="min-w-0 flex-1 space-y-3">
                                 <p class="font-mono type-label uppercase tracking-[0.28em] text-white/44">
@@ -247,7 +247,7 @@
                         </ul>
                     </div>
 
-                    <div class="card-outline rounded-[2rem] p-6 md:p-8">
+                    <div class="card-outline rounded-[2rem] p-6 md:p-8 border border-white/12 bg-white/[0.04] transition duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]">
                         <div class="flex items-start gap-4">
                             <div class="min-w-0 flex-1 space-y-3">
                                 <p class="font-mono type-label uppercase tracking-[0.28em] text-white/44">
@@ -318,7 +318,7 @@
 
     <footer class="border-t border-white/10">
         <div class="mx-auto max-w-6xl px-6 py-6 md:px-10">
-            <ul class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.28em]">
+            <ul class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center font-mono type-label uppercase tracking-[0.18em] text-white sm:tracking-[0.28em]">
                 <li>Oliver Something</li>
                 <li class="flex items-center">
                     <CopyrightIcon size={window.innerWidth > 640 ? 24 : 16} />
@@ -328,3 +328,16 @@
         </div>
     </footer>
 </div>
+
+<!--
+
+    1. TODO Add the logo to the navbar and favicon
+    2. TODO Add animation to the Info cards : DONE!
+    3. TODO Add Download CV
+    4. TODO Complete the about me section
+    5. TODO The stack section needs real content
+    6. TODO Work needs to be redefined and real content
+    7. TODO The contact requires real work to be done!
+    8. Todo Fix all of the remaining text-sizes : DONE!
+
+-->
