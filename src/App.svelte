@@ -111,7 +111,15 @@
             icon: GithubLogoIcon,
             url: "https://github.com/myaddress"
         }
-    ]
+    ];
+
+    const points = [
+        'Reliable API design with clean boundaries',
+        'Readable backend architecture that ages gracefully',
+        'Database models that support the product instead of sabotaging it',
+        'Thoughtful performance work and debugging discipline',
+        'Deployment-ready habits without infrastructure theater'
+    ];
 </script>
 
 <svelte:head>
@@ -206,25 +214,67 @@
                         description="The stack is practical, the workflow is simple, and the habits matter as much as the tools."
                         centered
                 />
-
                 <div class="mx-auto mt-10 grid w-full max-w-5xl gap-6 lg:grid-cols-2">
-                    <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8 md:p-10">
-                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-white/44">What I care about</p>
-                        <ul class="mt-6 space-y-4 text-sm leading-8 text-white/72 md:text-base">
-                            <li>Reliable API design with clean boundaries</li>
-                            <li>Readable backend architecture that ages gracefully</li>
-                            <li>Database models that support the product instead of sabotaging it</li>
-                            <li>Thoughtful performance work and debugging discipline</li>
-                            <li>Deployment-ready habits without infrastructure theater</li>
+                    <div class="card-outline rounded-[2rem] p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="min-w-0 flex-1 space-y-3">
+                                <p class="font-mono type-label uppercase tracking-[0.28em] text-white/44">
+                                    What I care about
+                                </p>
+
+                                <h3 class="type-card-title font-semibold tracking-tight text-white">
+                                    Backend work that still makes sense six months later
+                                </h3>
+
+                                <p class="type-body-sm max-w-xl text-white/62">
+                                    Less framework theater, more systems that are readable, reliable,
+                                    and painless to evolve.
+                                </p>
+                            </div>
+
+                            <div class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white/45 md:flex">
+                                <span class="font-mono type-label">01</span>
+                            </div>
+                        </div>
+
+                        <ul class="mt-8 divide-y divide-white/8">
+                            {#each points as point}
+                                <li class="flex items-start gap-4 py-4 first:pt-0 last:pb-0">
+                                    <span class="mt-[0.55rem] h-2 w-2 shrink-0 rounded-full bg-white/38"></span>
+                                    <p class="type-body-sm text-white/78">{point}</p>
+                                </li>
+                            {/each}
                         </ul>
                     </div>
 
-                    <div class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-8 md:p-10">
-                        <p class="font-mono text-xs uppercase tracking-[0.28em] text-white/44">Core toolkit</p>
-                        <div class="mt-6 flex flex-wrap gap-3">
-                            {#each skills as skill}
-                                <SkillBadge label={skill} />
-                            {/each}
+                    <div class="card-outline rounded-[2rem] p-6 md:p-8">
+                        <div class="flex items-start gap-4">
+                            <div class="min-w-0 flex-1 space-y-3">
+                                <p class="font-mono type-label uppercase tracking-[0.28em] text-white/44">
+                                    Core toolkit
+                                </p>
+
+                                <h3 class="type-card-title font-semibold tracking-tight text-white">
+                                    Tools I actually like building with
+                                </h3>
+
+                                <p class="type-body-sm max-w-xl text-white/62">
+                                    A backend-first stack shaped around clarity, delivery speed,
+                                    and systems that are easy to reason about.
+                                </p>
+                            </div>
+
+                            <div class="hidden h-11 w-11 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.03] text-white/45 md:flex">
+                                <span class="font-mono type-label">02</span>
+                            </div>
+                        </div>
+
+                        <div class="mt-8">
+                            <div class="flex flex-wrap gap-3">
+                                {#each skills as skill}
+                                    <SkillBadge label={skill} />
+                                {/each}
+                            </div>
                         </div>
                     </div>
                 </div>
