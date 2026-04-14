@@ -14,7 +14,8 @@
         GhostIcon,
         AddressBookIcon,
         UserIcon,
-        GlobeIcon
+        GlobeIcon,
+        CopyrightIcon
     } from 'phosphor-svelte';
 
     const skills = [
@@ -183,14 +184,6 @@
                         <InfoCard title={item.title} description={item.description} icon={item.icon} />
                     {/each}
                 </div>
-
-                <div class="mx-auto mt-6 max-w-5xl rounded-[2rem] border border-white/10 bg-white/[0.035] p-8 md:p-10">
-                    <p class="text-base leading-8 text-white/74 md:text-lg">
-                        This portfolio keeps the layout simple on purpose. The goal is to put the work, the thinking, and the engineering
-                        signal in front, without drowning it in decorative UI tricks. A backend portfolio should feel calm, legible, and structured.
-                        Not like it inhaled three landing-page templates and a bag of confetti.
-                    </p>
-                </div>
             </div>
         </section>
 
@@ -290,8 +283,13 @@
     </main>
 
     <footer class="border-t border-white/10">
-        <div class="mx-auto max-w-6xl px-6 py-6 text-center font-mono text-xs uppercase tracking-[0.28em] text-white/36 md:px-10">
-            Oliver Something • Python & Django Backend Developer
+        <div class="mx-auto flex max-w-6xl justify-center px-6 py-6 font-mono text-xs uppercase tracking-[0.28em] text-white/36 md:px-10">
+            <ul class="flex items-center gap-3 text-white">
+                <li>Oliver Something</li>
+                <li>|</li>
+                <li><CopyrightIcon color="white" size="20"/></li>
+                <li>{new Date().getFullYear()}</li>
+            </ul>
         </div>
     </footer>
 </div>
