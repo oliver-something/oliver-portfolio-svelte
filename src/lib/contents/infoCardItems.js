@@ -8,12 +8,12 @@ export const infoCardItems = [
     },
     {
         title: 'Core Skills',
-        description: 'Python, Django, relational databases, and Svelte.',
+        description: 'C#, Python, REST APIs, Software Architecture',
         icon: FileCodeIcon
     },
     {
         title: 'Working Style',
-        description: 'Practical, simple, scalable, and debug-friendly.',
+        description: 'Practical implementations, clear structures and scalable solutions',
         icon: WrenchIcon
     }
 ];

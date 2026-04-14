@@ -50,11 +50,11 @@
                     <p class="font-mono type-label uppercase tracking-[0.35em] text-white/55">Hey There, I'm</p>
 
                     <h1 class="type-hero font-semibold leading-none tracking-tight text-white sm:text-6xl">
-                        Oliver Something
+                        Khashayar Hosseini
                     </h1>
 
                     <p class="max-w-2xl type-body-lg leading-8 text-white/74">
-                        I build clean and efficient digital experiences.
+                        Computer engineer, backend developer and programming instructor focused on C#, Python, C++, APIs and software architecture.
                     </p>
 
                     <div class="flex flex-wrap items-center justify-center gap-4 pt-2">
@@ -88,8 +88,8 @@
             <div class="mx-auto w-full max-w-6xl">
                 <SectionTitle
                         eyebrow="About Me"
-                        title="Software engineer with a backend-first brain"
-                        description="I care about systems that stay readable under pressure: clean Django services, API design that makes sense, and architecture that solves actual product problems instead of dressing up as complexity."
+                        title="Software engineer with teaching background"
+                        description="I'm a software engineer based in Tehran, Iran. I enjoy finding solutions for real world problems. I also enjoy tweaking and tinkering new software tools."
                         centered
                 />
 
@@ -105,8 +105,8 @@
             <div class="mx-auto w-full max-w-6xl">
                 <SectionTitle
                         eyebrow="Stack"
-                        title="Tools and backend habits"
-                        description="The stack is practical, the workflow is simple, and the habits matter as much as the tools."
+                        title="Tools and backend foundations"
+                        description="My work is focused around backend development with languages like C# and Python. I also enjoy writing FullStack applications using tools like Svelte."
                         centered
                 />
                 <div class="mx-auto mt-10 grid w-full max-w-5xl gap-6 lg:grid-cols-2">
@@ -176,12 +176,12 @@
             </div>
         </section>
 
-        <section id="work" class="section-shell">
+        <section id="Selected Experience" class="section-shell">
             <div class="mx-auto w-full max-w-6xl">
                 <SectionTitle
-                        eyebrow="Work"
-                        title="Featured backend directions"
-                        description="Not shiny app-store tiles. Real backend ideas with clear scope, system thinking, and room for actual implementation details."
+                        eyebrow="Experience"
+                        title="Selected experience"
+                        description="A snapshot of teaching, freelance, and backend internship work that shaped my approach to APIs, architecture, and practical software development."
                         centered
                 />
 
@@ -194,7 +194,7 @@
                 <SectionTitle
                         eyebrow="Contact"
                         title="Need a backend developer who prefers solid systems over drama?"
-                        description="Replace the placeholder details below with your real links and you’re done. No special contact block circus required."
+                        description="Contact me for Fullstack / Backend freelance jobs. I am also open to part time positions."
                         centered
                 />
 
@@ -210,7 +210,7 @@
     <footer class="border-t border-white/10">
         <div class="mx-auto max-w-6xl px-6 py-6 md:px-10">
             <ul class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center font-mono type-label uppercase tracking-[0.18em] text-white sm:tracking-[0.28em]">
-                <li>Oliver Something</li>
+                <li>Khashayar Hosseini</li>
                 <li class="flex items-center">
                     <CopyrightIcon size={window.innerWidth > 640 ? 24 : 16} />
                 </li>
@@ -229,6 +229,4 @@
     5. TODO The stack section needs real content
     6. TODO Work needs to be redefined and real content
     7. TODO The contact requires real work to be done!
-    8. Todo Fix all of the remaining text-sizes : DONE!
-    9. Separation of concerns! Fuck!!!!!
 -->
