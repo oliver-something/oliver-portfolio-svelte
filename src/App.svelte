@@ -19,6 +19,7 @@
         CopyrightIcon
     } from 'phosphor-svelte';
     import ContactCard from "./lib/components/ContactCard.svelte";
+    import NavLinks from "./lib/components/NavLinks.svelte";
 
     const skills = [
         'Python',
@@ -125,20 +126,7 @@
     <BinaryRain />
     <div class="pointer-events-none fixed inset-0 -z-10 bg-[radial-gradient(circle_at_top,rgba(255,255,255,0.12),transparent_26%),linear-gradient(180deg,rgba(0,0,0,0.1),rgba(0,0,0,0.72))]"></div>
 
-    <header class="sticky top-0 z-30 border-b border-white/10 bg-black/55 backdrop-blur-xl">
-        <div class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
-            <a href="#home" class="font-mono text-sm uppercase tracking-[0.34em] text-white/90">
-                Oliver Something
-            </a>
-
-            <nav class="hidden items-center gap-8 text-sm text-white/65 md:flex">
-                <a class="transition hover:text-white" href="#about">About</a>
-                <a class="transition hover:text-white" href="#stack">Stack</a>
-                <a class="transition hover:text-white" href="#work">Work</a>
-                <a class="transition hover:text-white" href="#contact">Contact</a>
-            </nav>
-        </div>
-    </header>
+    <NavLinks/>
 
     <main class="flex flex-1 flex-col">
         <section id="home" class="section-shell flex min-h-[calc(100vh-72px)] items-center justify-center">
@@ -279,11 +267,12 @@
     </main>
 
     <footer class="border-t border-white/10">
-        <div class="mx-auto flex max-w-6xl justify-center px-6 py-6 font-mono text-xs uppercase tracking-[0.28em] text-white/36 md:px-10">
-            <ul class="flex items-center gap-3 text-white">
+        <div class="mx-auto max-w-6xl px-6 py-6 md:px-10">
+            <ul class="flex flex-wrap items-center justify-center gap-x-3 gap-y-2 text-center font-mono text-[10px] uppercase tracking-[0.18em] text-white sm:text-xs sm:tracking-[0.28em]">
                 <li>Oliver Something</li>
-                <li>|</li>
-                <li><CopyrightIcon color="white" size="20"/></li>
+                <li class="flex items-center">
+                    <CopyrightIcon size={window.innerWidth > 640 ? 24 : 16} />
+                </li>
                 <li>{new Date().getFullYear()}</li>
             </ul>
         </div>
