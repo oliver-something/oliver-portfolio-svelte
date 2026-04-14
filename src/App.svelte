@@ -10,6 +10,7 @@
         FileCodeIcon,
         GithubLogoIcon,
         LinkedinLogoIcon,
+        MailboxIcon,
         WrenchIcon,
         GhostIcon,
         AddressBookIcon,
@@ -17,6 +18,7 @@
         GlobeIcon,
         CopyrightIcon
     } from 'phosphor-svelte';
+    import ContactCard from "./lib/components/ContactCard.svelte";
 
     const skills = [
         'Python',
@@ -88,6 +90,27 @@
             icon: CodeIcon
         }
     ];
+
+    const contactInfoCardItems = [
+        {
+            title: 'Email Address',
+            address: "diablo31@live.co.uk",
+            icon: MailboxIcon,
+            url: "mailto:diablo31@live.co.uk"
+        },
+        {
+            title: 'LinkedIn',
+            address: "https://linkedin.com/in/myaddress",
+            icon: LinkedinLogoIcon,
+            url: "https://linkedin.com/in/myaddress"
+        },
+        {
+            title: 'GitHub',
+            address: "https://github.com/myaddress",
+            icon: GithubLogoIcon,
+            url: "https://github.com/myaddress"
+        }
+    ]
 </script>
 
 <svelte:head>
@@ -247,36 +270,9 @@
                 />
 
                 <div class="mx-auto mt-10 grid w-full max-w-5xl gap-4 md:grid-cols-3">
-                    <a
-                            href="mailto:your-email@example.com"
-                            class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 text-left transition hover:border-white/25 hover:bg-white/[0.05]"
-                    >
-                        <AddressBookIcon size="20" />
-                        <span class="mt-4 block font-mono text-[11px] uppercase tracking-[0.28em] text-white/45">Email</span>
-                        <span class="mt-3 block text-sm text-white/84">your-email@example.com</span>
-                    </a>
-
-                    <a
-                            href="https://github.com/yourusername"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 text-left transition hover:border-white/25 hover:bg-white/[0.05]"
-                    >
-                        <GithubLogoIcon size="20" />
-                        <span class="mt-4 block font-mono text-[11px] uppercase tracking-[0.28em] text-white/45">GitHub</span>
-                        <span class="mt-3 block text-sm text-white/84">github.com/yourusername</span>
-                    </a>
-
-                    <a
-                            href="https://www.linkedin.com/in/yourusername"
-                            target="_blank"
-                            rel="noreferrer"
-                            class="rounded-[2rem] border border-white/10 bg-white/[0.035] p-6 text-left transition hover:border-white/25 hover:bg-white/[0.05]"
-                    >
-                        <LinkedinLogoIcon size="20" />
-                        <span class="mt-4 block font-mono text-[11px] uppercase tracking-[0.28em] text-white/45">LinkedIn</span>
-                        <span class="mt-3 block text-sm text-white/84">linkedin.com/in/yourusername</span>
-                    </a>
+                    {#each contactInfoCardItems as item}
+                        <ContactCard {item} />
+                    {/each}
                 </div>
             </div>
         </section>
