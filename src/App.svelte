@@ -23,6 +23,11 @@
             name="description"
             content="Freelance / Part-time Developer focusing on FullStack and Backend Development."
     />
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <meta name="theme-color" content="#000000" />
 </svelte:head>
 
 <div class="noise relative min-h-screen overflow-x-hidden bg-black text-white">
@@ -219,14 +224,3 @@
         </div>
     </footer>
 </div>
-
-<!--
-
-    1. TODO Add the logo to the navbar and favicon
-    2. TODO Add animation to the Info cards : DONE!
-    3. TODO Add Download CV
-    4. TODO Complete the about me section
-    5. TODO The stack section needs real content
-    6. TODO Work needs to be redefined and real content
-    7. TODO The contact requires real work to be done!
--->
