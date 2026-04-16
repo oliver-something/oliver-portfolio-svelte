@@ -1,5 +1,6 @@
 <script>
     import { fade, fly } from 'svelte/transition';
+    import logo from '../../assets/racoon-logo.png';
 
     let isOpen = false;
 
@@ -31,10 +32,20 @@
     <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
         <a
                 href="#home"
-                class="z-[60] font-mono type-body-sm uppercase tracking-[0.34em] text-white/90"
+                class="z-[60] inline-flex items-center gap-3 text-white/90"
                 onclick={closeMenu}
         >
-            Oliver Something
+            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90">
+		        Digital
+	        </span>
+            <img
+                    src={logo}
+                    alt="Digital Raccoon"
+                    class="h-12 w-12 object-contain sm:h-20 sm:w-20"
+            />
+            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90">
+                Raccoon
+	        </span>
         </a>
 
         <nav class="hidden items-center gap-8 type-nav text-white/65 md:flex">
