@@ -1,9 +1,3 @@
-<!--
-in case
-border border-white/12 bg-white/[0.04] p-6 transition duration-300 hover:-translate-y-1 hover:border-white/25 hover:bg-white/[0.06]
--->
-
-
 <script>
     export let project = {
         eyebrow: '',
