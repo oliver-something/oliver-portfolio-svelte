@@ -29,13 +29,13 @@
 </script>
 
 <header class="sticky top-0 z-50 border-b border-white/10 bg-black/55 backdrop-blur-xl">
-    <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-4 md:px-10">
+    <div class="relative mx-auto flex max-w-6xl items-center justify-between px-6 py-2 md:px-10">
         <a
                 href="#home"
                 class="z-[60] inline-flex items-center gap-3 text-white/90"
                 onclick={closeMenu}
         >
-            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90">
+            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90 uppercase">
 		        Digital
 	        </span>
             <img
@@ -43,7 +43,7 @@
                     alt="Digital Raccoon"
                     class="h-12 w-12 object-contain sm:h-20 sm:w-20"
             />
-            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90">
+            <span class="font-mono type-body-sm tracking-[0.28em] text-white/90 uppercase">
                 Raccoon
 	        </span>
         </a>
