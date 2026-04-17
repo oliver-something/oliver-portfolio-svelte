@@ -14,6 +14,6 @@ export const contactInfoCardItems = [
     {
         title: 'GitHub',
         icon: GithubLogoIcon,
-        url: "https://github.com/myaddress"
+        url: "https://github.com/oliver-something"
     }
 ];
