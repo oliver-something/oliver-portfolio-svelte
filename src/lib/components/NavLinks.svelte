@@ -36,7 +36,7 @@
                 onclick={closeMenu}
         >
             <span class="font-mono type-body-sm tracking-[0.28em] text-white/90 uppercase">
-		        Digital
+		        Oliver
 	        </span>
             <img
                     src={logo}
@@ -44,7 +44,7 @@
                     class="h-12 w-12 object-contain sm:h-20 sm:w-20"
             />
             <span class="font-mono type-body-sm tracking-[0.28em] text-white/90 uppercase">
-                Raccoon
+                Something
 	        </span>
         </a>
 
