@@ -181,7 +181,7 @@
             </div>
         </section>
 
-        <section id="Selected Experience" class="section-shell">
+        <section id="work" class="section-shell">
             <div class="mx-auto w-full max-w-6xl">
                 <SectionTitle
                         eyebrow="Experience"
