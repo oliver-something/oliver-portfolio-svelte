@@ -3,6 +3,6 @@ import { svelte } from '@sveltejs/vite-plugin-svelte';
 import tailwindcss from '@tailwindcss/vite';
 
 export default defineConfig({
-  base: '/oliver-something.github.io/',
+  base: '/oliver-portfolio-svelte/',
   plugins: [svelte(), tailwindcss()]
 });
